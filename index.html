@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Prova Prática Web</title>
+</head>
+<body>
+    <div class="home-content">
+        <h1 class="home-h1">Login</h1>
+        <form action="">
+            <div class="formulario">
+                <label for="">Nome</label>
+                <input type="text" placeholder="digite seu nome" id="nomeCliente">
+                <label for="">E-mail:</label>
+                <input type="email" placeholder="digite seu e-mail" >
+                <label for="">Senha</label>
+                <input type="password" placeholder="digite sua senha">
+                <br>
+                <button type="button" class="btnLogin" id="btn">Login</button>
+
+            </div>
+        </form>       
+    </div>
+
+    <div class="img-settings display-on" id="selecaoProduto" style="display: none;">
+        <h1>Monte seu Setup</h1>
+        <button id = "btnNot" class="btnNot"><img src="/imgnot.webp" alt="Notebook" class="img-notebook img-config" ></button>
+        <button id="btnDesk"><img src="/desktopimg.jpg" alt="Desktop" class="img-desktop img-config"></button>
+    </div>
+
+    <div class="menu-notebook menu-on menu-config img-settings" id="not-menu">
+        <h1>Notebook Menu</h1>
+
+        <h2>CPU´s</h2>
+        <select  id="cpuNotebook" class="menu-notebook">
+            <option value="Intel Core i5-1135G7 - R$ 1200">Intel Core i5-1135G7 - R$ 1200</option>
+            <option value="Intel Core i7-1165G7 - R$ 1500">Intel Core i7-1165G7 - R$ 1500</option>
+            <option value="AMD Ryzen 5 4500U - R$ 1100">AMD Ryzen 5 4500U - R$ 1100</option>
+            <option value="AMD Ryzen 7 4700U - R$ 1300">AMD Ryzen 7 4700U - R$ 1300</option>
+        </select>
+
+        <h2>Memórias</h2>
+        <select  id="memoriaNotebook" class="menu-notebook">
+            <option value="8GB DDR4 - R$ 400">8GB DDR4 - R$ 400</option>
+            <option value="16GB DDR4 - R$ 800">16GB DDR4 - R$ 800</option>
+            <option value="32GB DDR4 - R$ 1200">32GB DDR4 - R$ 1200</option>
+            <option value="64GB DDR4 - R$ 1600">64GB DDR4 - R$ 1600</option>
+        </select>
+
+        <h2>HD/SSD</h2>
+        <select  id="armazenamentoNotebook" class="menu-notebook">
+            <option value="SSD 256GB - R$ 300">SSD 256GB - R$ 300</option>
+            <option value="SSD 512GB - R$ 500">SSD 512GB - R$ 500</option>
+            <option value="SSD 1TB - R$ 900">SSD 1TB - R$ 900</option>
+            <option value="HD 1TB - R$ 400">HD 1TB - R$ 400</option>
+        </select>
+        <h2>Sitemas Operacionais</h2>
+        <select id="soNotebook">
+            <option value="Windows 10 - R$ 400">Windows 10 - R$ 400</option>
+            <option value="Windows 11 - R$ 500">Windows 11 - R$ 500</option>
+        </select>
+        <button onclick="montarMaquina('Notebook')">Montar Desktop</button>
+    </div>
+
+    <div class="menu-desktop menu-on menu-config img-settings " id="menu-desk">
+        <h1>Menu Desktop</h1>
+
+        <h2>CPU´s</h2>
+        <select  id="cpuDesktop" class="menu-desktop">
+            <option value="Intel Core i5-1135G7 - R$ 1200">Intel Core i5-1135G7 - R$ 1200</option>
+            <option value="Intel Core i7-1165G7 - R$ 1500">Intel Core i7-1165G7 - R$ 1500</option>
+            <option value="AMD Ryzen 5 4500U - R$ 1100">AMD Ryzen 5 4500U - R$ 1100</option>
+            <option value="AMD Ryzen 7 4700U - R$ 1300">AMD Ryzen 7 4700U - R$ 1300</option>
+        </select>
+
+        <h2>Memórias</h2>
+        <select  id="memoriaDesktop" class="menu-desktop">
+            <option value="8GB DDR4 - R$ 400">8GB DDR4 - R$ 400</option>
+            <option value="16GB DDR4 - R$ 800">16GB DDR4 - R$ 800</option>
+            <option value="32GB DDR4 - R$ 1200">32GB DDR4 - R$ 1200</option>
+            <option value="64GB DDR4 - R$ 1600">64GB DDR4 - R$ 1600</option>
+        </select>
+
+        <h2>HD/SSD</h2>
+        <select id="armazenamentoDesktop" class="menu-desktop">
+            <option value="SSD 256GB - R$ 300">SSD 256GB - R$ 300</option>
+            <option value="SSD 512GB - R$ 500">SSD 512GB - R$ 500</option>
+            <option value="SSD 1TB - R$ 900">SSD 1TB - R$ 900</option>
+            <option value="HD 1TB - R$ 400">HD 1TB - R$ 400</option>
+
+        </select>
+
+        <h2>Monitores</h2>
+        <select id="monitorDesktop" class="menu-desktop">
+            <option value="Monitor 21' - R$ 500">Monitor 21' - R$ 500</option>
+            <option value="Monitor 24' - R$ 700">Monitor 24' - R$ 700</option>
+            <option value="Monitor 27' - R$ 1000">Monitor 27' - R$ 1000</option>
+            <option value="Monitor 32' - R$ 1500">Monitor 32' - R$ 1500</option>
+
+        </select>
+
+        <h2>Sitemas Operacionais</h2>
+        <select  id="soDesktop">
+            <option value="Windows 10 - R$ 400">Windows 10 - R$ 400</option>
+            <option value="Windows 11 - R$ 500">Windows 11 - R$ 500</option>
+        </select>
+        <button onclick="montarMaquina('Desktop')">Montar Desktop</button>
+    </div>
+    <div id="resultado" class="container" style="display: none;">
+        <h2>Montagem Finalizada</h2>
+        <p id="detalhes" class="detalhes-position"></p>
+    </div>
+
+    <script src="sript.js"></script>
+</body>
+</html>
